@@ -1,0 +1,375 @@
+/* Global */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+$color-main: #1abec9;
+$color-secondary: #fff;
+$my-font: 'Montserrat', sans serif;
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $my-font;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 108px, 0;
+    margin: 150px 0 0 0;
+}
+
+.section-title {
+    position: relative;
+    font-size: 36px;
+    margin: 0 0 60px 0;
+    padding: 20px 0 0; 
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: 50%;
+    width: 50px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: $color-main;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Splash */
+
+.splash {
+    height: 100vh;
+    position: relative;
+    background-image: url(https://i.postimg.cc/gkNGwgDp/pexels-mikhail-nilov-8654234.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.splash::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: ""; 
+    opacity: 0.4;
+    background-color: black;
+    z-index: 0;
+    top: 0;
+    left: 0;   
+}
+
+
+
+.splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.splash i {
+    font-size: 30px;
+    background: $color-main;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    color: $color-secondary;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.page-title {
+   color: $color-secondary;
+   font-size: 40px;
+   margin: 48px 0 0 0;
+   position: relative;
+   letter-spacing: 1px;
+   z-index: 1;
+}
+
+.page-title::after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 100px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: $color-main;
+}
+
+.page-subtitle {
+    color: $color-secondary;
+    margin: 48px 0 0 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+    
+   
+}
+
+/* Intro */
+
+.intro {
+    background: $color-secondary;    
+}
+
+.intro .container {
+    width: 70%;
+    margin: 60px auto;
+    padding: 48px 0;
+    font-size: 24px;
+    border-top: solid;
+    border-bottom: solid;
+}
+
+.intro h6 {
+    text-transform:uppercase;
+    font-weight: 100;
+    font-size: 14px;
+    padding: 20px;
+}
+
+/* About */
+
+.about {
+    background: #f0f0f0;
+    padding: 100px;
+    
+}
+
+/* Skills */
+
+ul {
+    list-style-type: none;
+}
+
+.skills ul li {
+    position: relative;
+    
+}
+
+.skill-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skill.right .skill-image {
+    right: 0;
+}
+
+
+.skill.right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+}
+
+.skill.left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+}
+
+.skill-titile {
+    text-transform: uppercase;
+}
+
+.skill-image img:hover {
+    transform: scale(2);
+}
+
+.skill-image img {
+    transition: all 1s;
+}
+
+/* Portfolio */
+
+.portfolio-row::before,
+.portfolio-row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.portfolio-item {
+   
+    float: left;
+    width: 33.3333%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+#item-1 {
+   background-image: url(https://i.postimg.cc/cCZn63H4/pexels-pixabay-247819.jpg);
+   
+}
+
+#item-2 {
+    background-image: url(https://i.postimg.cc/9fRTkVKV/pexels-kaboompics-com-5933.jpg);
+}
+
+#item-3 {
+    background-image: url(https://i.postimg.cc/zfYbxMmP/pexels-pixabay-273230-1.jpg);
+}
+
+#item-4 {
+    background-image: url(https://i.postimg.cc/7LF78drz/pexels-tranmautritam-326501.jpg);
+}
+
+#item-5 {
+    background-image: url(https://i.postimg.cc/8znMwsyt/pexels-pixabay-270360.jpg);
+}
+
+#item-6 {
+    background-image: url(https://i.postimg.cc/MT1BW5zF/pexels-cottonbro-5082579.jpg);
+}
+
+
+.item-title {
+   padding: 100px 0 20px 0;
+   color: $color-secondary;
+   text-transform: uppercase;
+   visibility: hidden;
+  
+}
+
+.item-button {
+    width: 120px;
+    height: 60px;
+    background-color: $color-main;
+    color: $color-secondary;
+    font-family: $my-font;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    visibility: hidden;   
+}
+
+.portfolio-item::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: ""; 
+    opacity: 0;
+    background-color: black;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.portfolio-item:hover::after {
+    display: block;
+    opacity: 0.7;
+    
+} 
+
+.portfolio-item:hover .item-button {
+    visibility: visible;
+    z-index: 1;
+}
+
+.portfolio-item:hover .item-title {
+    visibility: visible;
+    z-index: 1;
+}
+
+
+#extension-button {
+    margin: 30px;
+    visibility: visible;
+}
+
+/* Contact */
+
+.contact {
+    background-color: black;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact form {
+    padding: 30px;
+}
+
+.contact input {
+    margin: 20px auto;
+    display: block;
+    width: 47%;
+    height: 3em;
+    padding: 10px;
+    background-color: white;
+        
+}
+
+.contact textarea {
+    
+    padding: 10px;
+    width: 47%;
+    height: 200px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 30px auto;
+    visibility: visible;
+}
+
+
+::placeholder, textarea {
+    font-family: $my-font;
+    color: #838585;
+}
+
+input:focus, textarea:focus {
+    border: solid 4px $color-main;
+}
+
+/* Footer */
+
+.page-footer {
+    margin: 0;
+    padding: 0;
+    height: 4em;
+    background-color: #242424;
+    color: white;
+}
+
+.page-footer p {
+    padding: 1em;
+}
